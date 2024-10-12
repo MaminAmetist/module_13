@@ -11,12 +11,12 @@ dp = Dispatcher(bot, storage=MemoryStorage())
 
 
 @dp.message_handler(commands=['start'])
-async def start(messange):
+async def start(message):
     print('Привет! Я бот помогающий твоему здоровью.')
 
 
 @dp.message_handler()
-async def all_messange(messange):
+async def all_messange(message):
     print('Введите команду /start, чтобы начать общение.')
 
 
