@@ -16,7 +16,7 @@ async def start(message):
 
 
 @dp.message_handler()
-async def all_messange(message):
+async def all_message(message):
     print('Введите команду /start, чтобы начать общение.')
 
 
