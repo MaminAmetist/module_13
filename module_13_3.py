@@ -1,9 +1,8 @@
 # Методы отправки сообщений
 # Задача "Он мне ответил!":
 
-from aiogram import Bot, Dispatcher, executor, types
+from aiogram import Bot, Dispatcher, executor
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
-import asyncio
 
 api = ''
 bot = Bot(token=api)
