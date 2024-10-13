@@ -19,17 +19,19 @@ class UserState(StatesGroup):
     weight = State()
 
 
+@dp.message_handler(text=['Привет', 'привет'])
+async def all_message(message):
+    await message.answer('Радуемся вашему присутствию.'
+                         'Введите команду /start, чтобы начать общение.')
+
+
 @dp.message_handler(commands=['start'])
 async def start(message):
-    await message.answer('Привет! Я бот, помогающий твоему здоровью.')
+    await message.answer('Привет! Я бот, помогающий вашему здоровью,'
+                         ' для подсчета суточной нормы калорий введите команду /calories.')
 
 
-@dp.message_handler(text='Hi')
-async def all_message(message):
-    await message.answer('Введите команду /start, чтобы начать общение.')
-
-
-@dp.message_handler(text='Calories')
+@dp.message_handler(commands=['calories'])
 async def set_gender(message):
     await message.answer('Введите свой пол в формате "М/Ж"')
     await UserState.gender.set()
@@ -73,3 +75,4 @@ async def send_calories(message, state):
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
+    
