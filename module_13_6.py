@@ -1,5 +1,5 @@
-# Клавиатура кнопок
-# Задача "Меньше текста, больше кликов":
+# Инлайн клавиатуры
+# Задача "Ещё больше выбора":
 
 from aiogram import Bot, Dispatcher, executor
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
