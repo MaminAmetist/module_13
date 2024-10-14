@@ -18,9 +18,8 @@ kb.add(button_2)
 
 kbm = InlineKeyboardMarkup(resize_keyboard=True)
 button_3 = InlineKeyboardButton(text='Рассчитать норму калорий', callback_data='calories')
-kbm.add(button_3)
 button_4 = InlineKeyboardButton(text='Формулы расчёта', callback_data='formulas')
-kbm.add(button_4)
+kbm.add(button_3, button_4)
 
 
 class UserState(StatesGroup):
